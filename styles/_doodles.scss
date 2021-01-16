@@ -1,0 +1,58 @@
+//doodle placement
+.preamble::after {
+    content: "BCD";
+    font-family: 'Tombats';
+    font-size: 18.533vw;
+
+}
+
+.summary > p + p::after{
+    content: "H";
+    font-family: 'Tombats';
+    font-size: 18.533vw;
+    margin-right: 10px;
+    float: right;
+}
+
+.explanation::after {
+    content: "F";
+    font-family: 'Tombats';
+    font-size: 18.533vw;
+    margin-left: 50%;
+}
+
+.explanation > p:nth-of-type(1)::after{
+    content: "K ";
+    font-family: 'Tombats';
+    font-size: 18.533vw;
+    float: left;
+    margin-right: 10px;
+}
+
+.participation::after {
+    content: "LMO";
+    font-family: 'Tombats';
+    font-size: 18.533vw;
+}
+
+.benefits p::before {
+    content: "Q";
+    font-family: 'Tombats';
+    font-size: 8.533vw;
+    float: left;
+}
+
+.benefits::after {
+    content: "n";
+    font-family: 'Tombats';
+    font-size: 45vw;
+    margin-top: -75px;
+    margin-left: 30%;
+}
+
+
+.zen-resources::after{
+    content: "A";
+    font-family: 'Tombats';
+    font-size: 20vw;
+}

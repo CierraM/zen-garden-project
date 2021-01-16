@@ -1,0 +1,175 @@
+//layout for larger screens
+@import "atoms";
+@media screen and (min-width: $large-breakpoint) {
+
+    //reset positioning
+    html,
+    .page-wrapper,
+    .wrapper,
+    .sidebar,
+    .design-selection,
+    .design-selection ul li {
+        position: static;
+        padding-top: 0;
+    }
+
+
+    .intro{
+        h1{
+            margin-top:2rem;
+            margin-left:1.2rem;
+        }
+        h2{
+            margin-top:-3.2rem;
+            margin-left:1.2rem;
+        }
+        div{
+            margin-top:-2.4rem;
+            margin-left:1.2rem;
+        }
+        .preamble{
+            margin-top:-1.6rem;
+            margin-left:1.2rem;
+            h3{
+                margin-bottom:-1rem;
+            }
+        }
+    }
+    
+    .explanation, .participation, .benefits, .requirements{
+        h3{
+            padding-top: 6rem;
+            margin-left:1.2rem;
+        }
+        p{
+            margin-left:1.2rem;
+        }
+        p:nth-child(2){
+            margin-top: 0;
+        }
+    }
+    
+    .benefits{
+        height: $page-height-large*.2;
+    }
+
+    .page-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .intro,
+    .main {
+        grid-column: 1/2;
+
+    }
+
+    .sidebar {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: fit-content;
+    }
+
+    .design-selection{
+        width: 110%;
+    }
+
+    .design-selection nav{
+        width: $sidebar-width;
+        margin-left:auto;
+
+    }
+
+    .design-selection ul {
+        height: 100%;
+        width: $sidebar-width;
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 80px;
+
+
+    }
+
+
+    .design-selection ul li {
+        height: $large-sticky-size;
+        width: $large-sticky-size;
+        margin: $sticky-margin;
+    
+        &:nth-child(2) {
+            //garments
+            margin-top: $sticky-margin*21;
+            margin-left: $sticky-margin*-5;
+        }
+    
+        &:nth-child(3) {
+            //steel
+            margin-top: $sticky-margin*-6;
+        }
+    
+        &:nth-child(4) {
+            //apothecary
+            margin-left: (-14*$sticky-margin);
+            margin-top: $sticky-margin*7;
+    
+    
+        }
+    
+        &:nth-child(5) {
+            //screen filler
+            margin-left: (-6*$sticky-margin);
+            margin-top: 21*$sticky-margin;
+        }
+    
+        &:nth-child(6) {
+            //fountain kiss
+            margin-top: -5*$sticky-margin;
+        }
+    
+        &:nth-child(7) {
+            //a robot named Jimmy 
+            margin-right: $sticky-margin*8;
+            content: '';
+        }
+    
+        &:nth-child(8) {
+            //verde moderna
+            margin-left: (5*$sticky-margin);
+            margin-top: $sticky-margin*-4;
+
+        }
+    }
+
+    //large screen design-related things
+    #zen-intro,
+    #zen-explanation,
+    #zen-participation,
+    #zen-benefits,
+    #zen-requirements,
+    footer {
+        @include paper-texture-large;
+        height: $page-height-large;
+        padding-left: 90px;
+        padding-right: 20px;
+    }
+
+
+    footer{
+        @include paper-texture-large;
+        align-content: flex-start;
+        padding-top: 10rem;
+    }
+
+    .design-archives{
+        top: $page-height*2.58;
+        right: 33%;
+    }
+
+    .zen-resources{
+        font-size: $h3-large-size;
+        top: ($page-height*2.58) + 18vw;
+        right: 33%;
+    }
+
+}

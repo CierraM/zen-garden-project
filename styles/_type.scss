@@ -1,0 +1,124 @@
+@import 'variables';
+@font-face {
+    font-family: 'Tombats';
+    src: url('http://104.236.16.134/fonts/1') format('woff2'),
+         url('http://104.236.16.134/fonts/2') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+//This file is for mixins related to font for the zen garden styling.
+
+@mixin set-font-weight ($font-weight: $fontWeight) {
+    font-weight: $font-weight;
+    text-decoration: underline;
+}
+
+@mixin body-text () {
+    color: $pencilColor;
+    font-family: $bodyFont;
+    font-weight: $fontWeight;
+    font-size: $regular-font-size;
+    line-height:$line-height;
+}
+
+@mixin headings ($font-size) {
+    font-family: $headerFont;
+    font-size: $font-size;
+    font-weight: 200;
+    color: $pencilColor;
+    text-decoration: none;
+}
+
+@mixin sticky-note-type{
+    color: $penColor;
+    font-family: $stickyFont;
+    font-size: $sticky-font-size;
+    line-height: 1.2;
+    text-align: center;
+
+}
+
+body {
+    @include body-text();
+}
+
+h1 {
+    @include headings ($h1-size);
+
+}
+
+h2 {
+    @include headings ($h2-size);
+}
+
+h3 {
+    @include headings ($h3-size);
+}
+
+a {
+    color: $linkColor;
+}
+
+a:hover {
+    color: $linkHoverColor;
+
+}
+
+.design-selection ul li {
+    @include sticky-note-type();
+
+}
+
+.design-selection ul li a {
+    color: $penColor;
+
+}
+
+.design-name {
+    font-size: $small-font-size;
+}
+
+.designer-name {
+    font-size: $small-font-size;
+}
+
+footer a{
+    font-size: $small-font-size;
+}
+
+//special type rules for large screen
+@media screen and (min-width: $large-breakpoint){
+
+    h1{
+        font-size:$h1-large-size;
+    }
+    h2{
+        font-size:$h2-large-size;
+    }
+    h3{
+        font-size:$h3-large-size;
+    }
+    p{
+        font-size: $regular-large-font-size;
+    }
+
+    .design-selection ul li{
+        font-size:$sticky-large-font-size;
+    }
+
+    .design-name{
+        font-size:$small-large-size;
+    }
+
+    .designer-name{
+        font-size:$small-large-size;
+    }
+
+    .design-archives{
+        font-size: $h3-large-size;
+    }
+    
+}
